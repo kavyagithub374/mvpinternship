@@ -13,4 +13,5 @@
 
     e. Display all property names, current tenants first and last names and rental payments per week/ fortnight/month for the properties in question a). 
 
-All queries are in _assignment.sql file
+All queries are in >> _assignment.sql file
+SSRS Report output >> SSRS_task_result.PNG
