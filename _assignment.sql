@@ -1,6 +1,6 @@
 /*
 1. Write queries to return the following: 
-a. Display a list of all property names and their property id’s for Owner Id: 1426. 
+a. Display a list of all property names and their property idâ€™s for Owner Id: 1426. 
 
 b. Display the current home value for each property in question a). 
 
@@ -60,7 +60,9 @@ SELECT P.Name as PropertyName, OP.PropertyId, PHV.Value, TP.PaymentAmount,TPF.Na
 
 
   --Question e
- SELECT Prop.Name as 'Property Name',personinfo.FirstName,personinfo.LastName,TPF.Name as 'Rental Payments' FROM [Keys].[dbo].[OwnerProperty] as OwnerProp 
+SELECT Prop.Name as 'Property Name',personinfo.FirstName,personinfo.LastName,
+ TenantProp.PaymentAmount,
+ TPF.Name as 'Rental Payments' FROM [Keys].[dbo].[OwnerProperty] as OwnerProp 
   inner join [Keys].[dbo].Property as Prop
   On OwnerProp.OwnerId=1426 and OwnerProp.PropertyId=Prop.id 
   inner join keys.dbo.TenantProperty as TenantProp on OwnerProp.PropertyId=TenantProp.PropertyId 
